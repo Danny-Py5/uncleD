@@ -1,383 +1,602 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Daniel Olatunde Fatokun">
-    <meta name="description" content="UncleD kitchen eCommerce website where people can order food from there houses at their own peace.">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Daniel Olatunde Fatokun" />
+        <meta
+            name="description"
+            content="UncleD kitchen eCommerce website where people can order food from there houses at their own peace." />
 
-    <!-- font awesome library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!-- font awesome library -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
-    <title>UncleD Kitchen - Landing page</title>
+        <title>UncleD Kitchen - Landing page</title>
 
-    <link rel="stylesheet" href="styles/style.css">
-</head>
-<body>
+        <link rel="stylesheet" href="styles/style.css" />
+    </head>
+    <body>
+        <header class="header" id="header">
+            <section class="header__wrapper">
+                <div class="header__logo-cont flex-center">
+                    <!-- <img src="" alt=""> -->
+                    <b class="header__logo">UncleD Logo</b>
+                </div>
 
-    <header class="header" id="header">
-        <section class="header__wrapper">
-            <div class="header__logo-cont flex-center">
-                <!-- <img src="" alt=""> -->
-                <b class="header__logo">UncleD Logo</b>
-            </div>
+                <nav class="header__nav flex-center">
+                    <ul class="header__ul">
+                        <li>
+                            <a href="#hero" class="header__a"> Home </a>
+                        </li>
+                        <li>
+                            <a href="#menu" class="header__a"> Menu </a>
+                        </li>
+                        <li>
+                            <a href="#service" class="header__a"> Service </a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="header__a"> Contact </a>
+                        </li>
+                        <li>
+                            <a href="#about" class="header__a"> About </a>
+                        </li>
+                        <li>
+                            <div class="header__login login1">
+                                <button
+                                    onclick="window.location.href='login.html'"
+                                    class="header__login-button header__button">
+                                    <i class="fas fa-sign-in-alt"></i> Login
+                                </button>
+                                <button
+                                    onclick="window.location.href='create-account.html'"
+                                    class="header__create-account-button header__button">
+                                    <i class="fas fa-user-plus"></i> Sign Up
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
 
-            <nav class="header__nav flex-center">
-                <ul class="header__ul">
-                    <li>
-                        <a href="#hero" class="header__a">
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#menu" class="header__a">
-                            Menu
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#service" class="header__a">
-                            Service
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#contact" class="header__a">
-                            Contact
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#about" class="header__a">
-                            About
-                        </a>
-                    </li>
-                    <li>
-                        <div class="header__login login1">
-                            <button onclick="window.location.href='login.html'" class="header__login-button header__button">
-                                <i class="fas fa-sign-in-alt"></i> Login
-                            </button>
-                            <button onclick="window.location.href='create-account.html'" class="header__create-account-button header__button">
-                                <i class="fas fa-user-plus"></i> Sign Up
-                            </button>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
+                <div class="header__login login2">
+                    <button
+                        onclick="window.location.href='login.html'"
+                        class="header__login-button header__button">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </button>
+                    <button
+                        onclick="window.location.href='create-account.html'"
+                        class="header__create-account-button header__button">
+                        <i class="fas fa-user-plus"></i> Sign Up
+                    </button>
+                </div>
 
-            <div class="header__login login2">
-                <button onclick="window.location.href='login.html'" class="header__login-button header__button">
-                    <i class="fas fa-sign-in-alt"></i> Login
-                </button>
-                <button onclick="window.location.href='create-account.html'" class="header__create-account-button header__button">
-                    <i class="fas fa-user-plus"></i> Sign Up
-                </button>
-            </div>
+                <div class="header__drop-menu-cont">
+                    <button class="header__drop-menu header__button">
+                        <i class="fas fa-bars"></i>
+                        <!-- <i class="fas fa-times"></i> -->
+                    </button>
+                </div>
+            </section>
+        </header>
 
-            <div class="header__drop-menu-cont">
-                <button class="header__drop-menu header__button">
-                    <i class="fas fa-bars"></i> 
-                    <!-- <i class="fas fa-times"></i> -->
-                </button>
+        <section class="hero section" id="hero">
+            <div class="section-wrapper hero__wrapper">
+                <section class="hero__division">
+                    <h1
+                        ><span class="">Taste the Joy,</span>
+                        <span class="nowwrap">Love the Flavor!</span></h1
+                    >
+                    <p style="max-width: 50ch"
+                        >taste of delicious dishes crafted from the freshest
+                        ingredients, prepared with care, and delivered right to
+                        your doorstep.</p
+                    >
+
+                    <button onclick="window.location.href='#menu'"
+                        >Explore Our Menu</button
+                    >
+                </section>
+
+                <section class="hero__division">
+                    <div class="hero__eclipse"></div>
+                    <div class="hero__eclipse">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <img
+                            class="hero__img"
+                            src="img/downloads/hero-pizza.png"
+                            alt="" />
+                        <img
+                            class="hero__img"
+                            src="img/menu/jollof-rice-2.jpg"
+                            alt="" />
+                        <img
+                            class="hero__img"
+                            src="img/downloads/food-2.png"
+                            alt="" /> </div
+                    ><div class="hero__eclipse"></div>
+                </section>
             </div>
         </section>
 
-    </header>
-
-
-    <section class="hero section" id="hero">
-        <div class="section-wrapper hero__wrapper">
-            <section class="hero__division">    
-                <h1><span class="">Taste the Joy,</span> <span class="nowwrap">Love the Flavor!</span></h1>
-                <p style="max-width: 50ch">taste of delicious dishes crafted from the freshest ingredients, prepared with care, and delivered right to your doorstep.</p>
-
-                <button onclick="window.location.href='#menu'" >Explore Our Menu</button>
-            </section>
-
-            <section class="hero__division">
-                <div class="hero__eclipse"></div>
-                <div class="hero__eclipse">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <img class="hero__img"  src="img/downloads/hero-pizza.png" alt="">
-                    <img class="hero__img" src="img/menu/jollof-rice-2.jpg" alt="">
-                    <img class="hero__img" src="img/downloads/food-2.png" alt="">
-                    
-                </div><div class="hero__eclipse"></div>
-            </section>
-        </div>
-    </section>
-
-    <!-- category -->
-    <section class="section category" id="category">
-        <div class="category__wrapper section-wrapper">
-            <h2 class="category__h2">Category</h2>
-            <div class="category-cont">
-                <figure class="category__figure">
-                    <img width="100" height="100" src="img/downloads/food-3.png" alt="food" class="category-img">
-                    <figcaption>Rice</figcaption>
-                </figure>
-                <figure class="category__figure">
-                    <img width="100" height="100" src="img/downloads/food-2.png" alt="food" class="category-img">
-                    <figcaption>Fish</figcaption>
-                </figure>
-                <figure class="category__figure">
-                    <img width="100" height="100" src="img/downloads/food-1.png" alt="food" class="category-img">
-                    <figcaption>shawama</figcaption>
-                </figure>
-                <figure class="category__figure">
-                    <img width="100" height="100" src="img/downloads/food-4.png" alt="food" class="category-img">
-                    <figcaption>Pizza</figcaption>
-                </figure>
-                <figure class="category__figure">
-                    <img width="100" height="100" src="img/downloads/food-5.png" alt="food" class="category-img">
-                    <figcaption>Vegetables</figcaption>
-                </figure>
-                <figure class="category__figure">
-                    <img width="100" height="100" src="img/downloads/food-6.png" alt="food" class="category-img">
-                    <figcaption>Soup</figcaption>
-                </figure>
-                <figure class="category__figure">
-                    <img width="100" height="100" src="img/downloads/food-7.png" alt="food" class="category-img">
-                    <figcaption>Other</figcaption>
-                </figure>
-                <figure class="category__figure">
-                    <img width="100" height="100" src="img/downloads/food-3.png" alt="food" class="category-img">
-                    <figcaption>Other</figcaption>
-                </figure>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our menu -->
-    <section class="our-menu section" id="menu">
-        <div  class="our-menu__wrapper section-wrapper">
-            <h2 class="our-menu__h2">Our Menu</h2>
-            <div class="menu__card-wrapper">
-                <div class="menu__card">
-                    <figure>
-                        <img width="200px" src="img/menu/efo-and-egusi-soup.jpg" alt="efo-and-egusi-soup">
+        <!-- category -->
+        <section class="section category" id="category">
+            <div class="category__wrapper section-wrapper">
+                <h2 class="category__h2">Category</h2>
+                <div class="category-cont">
+                    <figure class="category__figure" draggable="false">
+                        <img
+                            width="100"
+                            height="100"
+                            src="img/downloads/food-3.png"
+                            alt="food"
+                            class="category-img" />
+                        <figcaption>Rice</figcaption>
                     </figure>
-                    <div class="menu__description ">
-                        <h3>Jollof Rice</h3>
-                        <p>Delicious Nigerian Jollof rice served with fried chicken</p>
-                        <p></p>
-                    </div>
-                </div>
-                <div class="menu__card">
-                    <figure>
-                        <img width="200px" src="img/menu/efo-and-egusi-soup.jpg" alt="efo-and-egusi-soup">
+                    <figure class="category__figure" draggable="false">
+                        <img
+                            width="100"
+                            height="100"
+                            src="img/downloads/food-2.png"
+                            alt="food"
+                            class="category-img" />
+                        <figcaption>Fish</figcaption>
                     </figure>
-                    <div class="menu__description ">
-                        <h3>Jollof Rice</h3>
-                        <p>Delicious Nigerian Jollof rice served with fried chicken</p>
-                        <p></p>
-                    </div>
-                </div>
-                <div class="menu__card">
-                    <figure>
-                        <img width="200px" src="img/menu/efo-and-egusi-soup.jpg" alt="efo-and-egusi-soup">
+                    <figure class="category__figure" draggable="false">
+                        <img
+                            width="100"
+                            height="100"
+                            src="img/downloads/food-1.png"
+                            alt="food"
+                            class="category-img" />
+                        <figcaption>shawama</figcaption>
                     </figure>
-                    <div class="menu__description ">
-                        <h3>Jollof Rice</h3>
-                        <p>Delicious Nigerian Jollof rice served with fried chicken</p>
-                        <p></p>
-                    </div>
-                </div>
-                <div class="menu__card">
-                    <figure>
-                        <img width="200px" src="img/menu/efo-and-egusi-soup.jpg" alt="efo-and-egusi-soup">
+                    <figure class="category__figure" draggable="false">
+                        <img
+                            width="100"
+                            height="100"
+                            src="img/downloads/food-4.png"
+                            alt="food"
+                            class="category-img" />
+                        <figcaption>Pizza</figcaption>
                     </figure>
-                    <div class="menu__description ">
-                        <h3>Jollof Rice</h3>
-                        <p>Delicious Nigerian Jollof rice served with fried chicken</p>
-                        <p></p>
-                    </div>
-                </div>
-                <div class="menu__card">
-                    <figure>
-                        <img width="200px" src="img/menu/efo-and-egusi-soup.jpg" alt="efo-and-egusi-soup">
+                    <figure class="category__figure" draggable="false">
+                        <img
+                            width="100"
+                            height="100"
+                            src="img/downloads/food-5.png"
+                            alt="food"
+                            class="category-img" />
+                        <figcaption>Vegetables</figcaption>
                     </figure>
-                    <div class="menu__description ">
-                        <h3>Jollof Rice</h3>
-                        <p>Delicious Nigerian Jollof rice served with fried chicken</p>
-                        <p></p>
-                    </div>
-                </div>
-                <div class="menu__card">
-                    <figure>
-                        <img width="200px" src="img/menu/efo-and-egusi-soup.jpg" alt="efo-and-egusi-soup">
+                    <figure class="category__figure" draggable="false">
+                        <img
+                            width="100"
+                            height="100"
+                            src="img/downloads/food-6.png"
+                            alt="food"
+                            class="category-img" />
+                        <figcaption>Soup</figcaption>
                     </figure>
-                    <div class="menu__description ">
-                        <h3>Jollof Rice</h3>
-                        <p>Delicious Nigerian Jollof rice served with fried chicken</p>
-                        <p></p>
-                    </div>
-                </div>
-                <div class="menu__card">
-                    <figure>
-                        <img width="200px" src="img/menu/efo-and-egusi-soup.jpg" alt="efo-and-egusi-soup">
+                    <figure class="category__figure" draggable="false">
+                        <img
+                            width="100"
+                            height="100"
+                            src="img/downloads/food-7.png"
+                            alt="food"
+                            class="category-img" />
+                        <figcaption>Other</figcaption>
                     </figure>
-                    <div class="menu__description ">
-                        <h3>Jollof Rice</h3>
-                        <p>Delicious Nigerian Jollof rice served with fried chicken</p>
-                        <p></p>
-                    </div>
-                </div>
-                <div class="menu__card">
-                    <figure>
-                        <img width="200px" src="img/menu/efo-and-egusi-soup.jpg" alt="efo-and-egusi-soup">
+                    <figure class="category__figure" draggable="false">
+                        <img
+                            width="100"
+                            height="100"
+                            src="img/downloads/food-3.png"
+                            alt="food"
+                            class="category-img" />
+                        <figcaption>Other</figcaption>
                     </figure>
-                    <div class="menu__description ">
-                        <h3>Jollof Rice</h3>
-                        <p>Delicious Nigerian Jollof rice served with fried chicken</p>
-                        <p></p>
-                    </div>
                 </div>
             </div>
-        </div>
-        <img class="leaf" src="img/downloads/leafs.png" alt="leaf">
-        <img class="leaf" src="img/downloads/leafs.png" alt="leaf">
-    </section>
+        </section>
 
-    <!-- Why us -->
-    <section class="why-us section" id="whyUs">
-        <div class="why-us__wrapper section-wrapper">
-            <div class="why-us__cont flex-center">
-                <div class="circle">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    
+        <!-- Our menu -->
+        <section class="our-menu section" id="menu">
+            <div class="our-menu__wrapper section-wrapper">
+                <h2 class="our-menu__h2">Our Menu</h2>
+                <div class="menu__card-wrapper">
+                    <div class="menu__card">
+                        <figure>
+                            <img
+                                width="200px"
+                                src="img/menu/efo-and-egusi-soup.jpg"
+                                alt="efo-and-egusi-soup" />
+                        </figure>
+                        <div class="menu__description">
+                            <h3>Jollof Rice</h3>
+                            <p
+                                >Delicious Nigerian Jollof rice served with
+                                fried chicken</p
+                            >
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="menu__card">
+                        <figure>
+                            <img
+                                width="200px"
+                                src="img/menu/efo-and-egusi-soup.jpg"
+                                alt="efo-and-egusi-soup" />
+                        </figure>
+                        <div class="menu__description">
+                            <h3>Jollof Rice</h3>
+                            <p
+                                >Delicious Nigerian Jollof rice served with
+                                fried chicken</p
+                            >
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="menu__card">
+                        <figure>
+                            <img
+                                width="200px"
+                                src="img/menu/efo-and-egusi-soup.jpg"
+                                alt="efo-and-egusi-soup" />
+                        </figure>
+                        <div class="menu__description">
+                            <h3>Jollof Rice</h3>
+                            <p
+                                >Delicious Nigerian Jollof rice served with
+                                fried chicken</p
+                            >
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="menu__card">
+                        <figure>
+                            <img
+                                width="200px"
+                                src="img/menu/efo-and-egusi-soup.jpg"
+                                alt="efo-and-egusi-soup" />
+                        </figure>
+                        <div class="menu__description">
+                            <h3>Jollof Rice</h3>
+                            <p
+                                >Delicious Nigerian Jollof rice served with
+                                fried chicken</p
+                            >
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="menu__card">
+                        <figure>
+                            <img
+                                width="200px"
+                                src="img/menu/efo-and-egusi-soup.jpg"
+                                alt="efo-and-egusi-soup" />
+                        </figure>
+                        <div class="menu__description">
+                            <h3>Jollof Rice</h3>
+                            <p
+                                >Delicious Nigerian Jollof rice served with
+                                fried chicken</p
+                            >
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="menu__card">
+                        <figure>
+                            <img
+                                width="200px"
+                                src="img/menu/efo-and-egusi-soup.jpg"
+                                alt="efo-and-egusi-soup" />
+                        </figure>
+                        <div class="menu__description">
+                            <h3>Jollof Rice</h3>
+                            <p
+                                >Delicious Nigerian Jollof rice served with
+                                fried chicken</p
+                            >
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="menu__card">
+                        <figure>
+                            <img
+                                width="200px"
+                                src="img/menu/efo-and-egusi-soup.jpg"
+                                alt="efo-and-egusi-soup" />
+                        </figure>
+                        <div class="menu__description">
+                            <h3>Jollof Rice</h3>
+                            <p
+                                >Delicious Nigerian Jollof rice served with
+                                fried chicken</p
+                            >
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="menu__card">
+                        <figure>
+                            <img
+                                width="200px"
+                                src="img/menu/efo-and-egusi-soup.jpg"
+                                alt="efo-and-egusi-soup" />
+                        </figure>
+                        <div class="menu__description">
+                            <h3>Jollof Rice</h3>
+                            <p
+                                >Delicious Nigerian Jollof rice served with
+                                fried chicken</p
+                            >
+                            <p></p>
+                        </div>
+                    </div>
                 </div>
-                <div class="circle">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <img class="center-image" src="img/menu/fish-2.jpg" alt="fish">
-
-                    <img src="img/menu/soup.jpg" alt="" class="round-img">
-                    <img src="img/menu/rice-with-carrot.jpg" alt="" class="round-img">
-                    <img src="img/menu/fish-3.jpg" alt="" class="round-img">
-                    <img src="img/menu/moimoi-with-egg.jpg" alt="" class="round-img">
-                    <img src="img/menu/moimoi-fish-with-egg.jpg" alt="" class="round-img">
-                </div>    
             </div>
+            <img class="leaf" src="img/downloads/leafs.png" alt="leaf" />
+            <img class="leaf" src="img/downloads/leafs.png" alt="leaf" />
+        </section>
 
-            <div class="why-us__cont">
-                <h2>Why you will like to choose <span class="uncled">UncleD Kitchen</span></h2>
-                <p>We’re not just another food delivery service. At <strong class="uncled">UncleD Kitchen</strong>, we make sure you enjoy the best food experience, delivered straight to your door. Here’s why we’re the best choice for not only you but also family and loved ones.</p>
+        <!-- Why us -->
+        <section class="why-us section" id="whyUs">
+            <div class="why-us__wrapper section-wrapper">
+                <div class="why-us__cont flex-center">
+                    <div class="circle">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="circle">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <img
+                            class="center-image"
+                            src="img/menu/fish-2.jpg"
+                            alt="fish" />
 
-                <div class="why-card-cont">
-                    <div class="y-card">
-                        <h3>Fresh Ingredients</h3>
-                        <p>We partner with trusted restaurants and chefs to ensure every meal is prepared with the freshest and finest ingredients.</p>
+                        <img src="img/menu/soup.jpg" alt="" class="round-img" />
+                        <img
+                            src="img/menu/rice-with-carrot.jpg"
+                            alt=""
+                            class="round-img" />
+                        <img
+                            src="img/menu/fish-3.jpg"
+                            alt=""
+                            class="round-img" />
+                        <img
+                            src="img/menu/moimoi-with-egg.jpg"
+                            alt=""
+                            class="round-img" />
+                        <img
+                            src="img/menu/moimoi-fish-with-egg.jpg"
+                            alt=""
+                            class="round-img" />
                     </div>
-                    <div class="y-card">
-                        <h3>On-Time, Every Time</h3>
-                        <p>With our reliable delivery network, your food arrives hot and fresh, just as you like it.</p>
-                    </div>
-                    <div class="y-card">
-                        <h3>Delicious on a Budget</h3>
-                        <p>Enjoy great food without stretching your wallet, with regular deals and discounts just for you.</p>
-                    </div>
-                    <div class="y-card">
-                        <h3>Easy to Order</h3>
-                        <p>Our user-friendly platform ensures a hassle-free experience, making ordering your favorite meals quick and simple.</p>
+                </div>
+
+                <div class="why-us__cont">
+                    <h2
+                        >Why you will like to choose
+                        <span class="uncled">UncleD Kitchen</span></h2
+                    >
+                    <p
+                        >We’re not just another food delivery service. At
+                        <strong class="uncled">UncleD Kitchen</strong>, we make
+                        sure you enjoy the best food experience, delivered
+                        straight to your door. Here’s why we’re the best choice
+                        for not only you but also family and loved ones.</p
+                    >
+
+                    <div class="why-card-cont">
+                        <div class="y-card">
+                            <h3>Fresh Ingredients</h3>
+                            <p
+                                >We partner with trusted restaurants and chefs
+                                to ensure every meal is prepared with the
+                                freshest and finest ingredients.</p
+                            >
+                        </div>
+                        <div class="y-card">
+                            <h3>On-Time, Every Time</h3>
+                            <p
+                                >With our reliable delivery network, your food
+                                arrives hot and fresh, just as you like it.</p
+                            >
+                        </div>
+                        <div class="y-card">
+                            <h3>Delicious on a Budget</h3>
+                            <p
+                                >Enjoy great food without stretching your
+                                wallet, with regular deals and discounts just
+                                for you.</p
+                            >
+                        </div>
+                        <div class="y-card">
+                            <h3>Easy to Order</h3>
+                            <p
+                                >Our user-friendly platform ensures a
+                                hassle-free experience, making ordering your
+                                favorite meals quick and simple.</p
+                            >
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-     <section class="faq">
+        <section class="faq">
             <div class="section-wrapper faq-wraper">
                 <h2 class="faq__h2">Frequently Asked Questions</h2>
                 <div class="question__cont">
-                    <div class="question__wrapper"  data-id="q1"  data-isExpanded="false">
+                    <div
+                        class="question__wrapper"
+                        data-id="q1"
+                        data-isExpanded="false">
                         <div class="question">
-                            <h4 class="question__h4" style="margin: 0;">
+                            <h4 class="question__h4" style="margin: 0">
                                 How can I get started?
                             </h4>
-                            <button data-id="q1" class="faq__expand-btn" data-isExpanded="false">+</button>
+                            <button
+                                data-id="q1"
+                                class="faq__expand-btn"
+                                data-isExpanded="false"
+                                >+</button
+                            >
                         </div>
                         <div class="answer answer-q1">
-                            <p>Click on the Menu Icon on the header. From the dropdown menu, click on the <b>Sign Up button</b>. You would be redirected to the Sign-up page. <b>Input your email and password.</b> click on the <b>submit</b> button to create an account for you</p>
-                            <p>You would be redirected to the <b>Login page</b> to verify your account from the link that would be sent to your provided email address</p>
+                            <p
+                                >Click on the Menu Icon on the header. From the
+                                dropdown menu, click on the
+                                <b>Sign Up button</b>. You would be redirected
+                                to the Sign-up page.
+                                <b>Input your email and password.</b> click on
+                                the <b>submit</b> button to create an account
+                                for you</p
+                            >
+                            <p
+                                >You would be redirected to the
+                                <b>Login page</b> to verify your account from
+                                the link that would be sent to your provided
+                                email address</p
+                            >
                         </div>
                     </div>
 
-                    <div class="question__wrapper"  data-id="q2"  data-isExpanded="false">
+                    <div
+                        class="question__wrapper"
+                        data-id="q2"
+                        data-isExpanded="false">
                         <div class="question">
-                            <h4 class="question__h4" style="margin: 0;">
+                            <h4 class="question__h4" style="margin: 0">
                                 How does it work?
                             </h4>
-                            <button data-id="q2" class="faq__expand-btn" data-isExpanded="false">+</button>
+                            <button
+                                data-id="q2"
+                                class="faq__expand-btn"
+                                data-isExpanded="false"
+                                >+</button
+                            >
                         </div>
                         <div class="answer answer-q2">
                             <p>
-                                Simply browse our menu, add your favorite dishes to the cart, and proceed to checkout. Once your order is confirmed, our team will prepare your meal and deliver it to your location.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="question__wrapper"  data-id="q3"  data-isExpanded="false">
-                        <div class="question">
-                            <h4 class="question__h4" style="margin: 0;">
-                                Where do you deliver?
-                            </h4>
-                            <button data-id="q3" class="faq__expand-btn" data-isExpanded="false">+</button>
-                        </div>
-                        <div class="answer answer-q3">
-                            <p>
-                                We currently deliver to <b>Ilu-Alaye, Oniparaga, Rubber Estate and Araromi-Obu</b>. If your area is not listed, stay tuned as we’re expanding our delivery zones.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="question__wrapper"  data-id="q4"  data-isExpanded="false">
-                        <div class="question">
-                            <h4 class="question__h4" style="margin: 0;">
-                                How do I place an order?
-                            </h4>
-                            <button data-id="q4" class="faq__expand-btn" data-isExpanded="false">+</button>
-                        </div>
-                        <div class="answer answer-q4">
-                            <p>
-                                Browse our menu, select the dishes you want, and click on "Add to Cart." When you're ready, go to your cart and proceed with payment to confirm your order.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="question__wrapper"  data-id="q5"  data-isExpanded="false">
-                        <div class="question">
-                            <h4 class="question__h4" style="margin: 0;">
-                                Can I schedule an order for later?
-                            </h4>
-                            <button data-id="q5" class="faq__expand-btn" data-isExpanded="false">+</button>
-                        </div>
-                        <div class="answer answer-q5">
-                            <p>
-                                Absolutely! You can select a delivery time during the checkout process to have your food delivered at a later time.
+                                Simply browse our menu, add your favorite dishes
+                                to the cart, and proceed to checkout. Once your
+                                order is confirmed, our team will prepare your
+                                meal and deliver it to your location.
                             </p>
                         </div>
                     </div>
 
-                    <div class="question__wrapper"  data-id="q6"  data-isExpanded="false">
+                    <div
+                        class="question__wrapper"
+                        data-id="q3"
+                        data-isExpanded="false">
                         <div class="question">
-                            <h4 class="question__h4" style="margin: 0;">
+                            <h4 class="question__h4" style="margin: 0">
+                                Where do you deliver?
+                            </h4>
+                            <button
+                                data-id="q3"
+                                class="faq__expand-btn"
+                                data-isExpanded="false"
+                                >+</button
+                            >
+                        </div>
+                        <div class="answer answer-q3">
+                            <p>
+                                We currently deliver to
+                                <b
+                                    >Ilu-Alaye, Oniparaga, Rubber Estate and
+                                    Araromi-Obu</b
+                                >. If your area is not listed, stay tuned as
+                                we’re expanding our delivery zones.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="question__wrapper"
+                        data-id="q4"
+                        data-isExpanded="false">
+                        <div class="question">
+                            <h4 class="question__h4" style="margin: 0">
+                                How do I place an order?
+                            </h4>
+                            <button
+                                data-id="q4"
+                                class="faq__expand-btn"
+                                data-isExpanded="false"
+                                >+</button
+                            >
+                        </div>
+                        <div class="answer answer-q4">
+                            <p>
+                                Browse our menu, select the dishes you want, and
+                                click on "Add to Cart." When you're ready, go to
+                                your cart and proceed with payment to confirm
+                                your order.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="question__wrapper"
+                        data-id="q5"
+                        data-isExpanded="false">
+                        <div class="question">
+                            <h4 class="question__h4" style="margin: 0">
+                                Can I schedule an order for later?
+                            </h4>
+                            <button
+                                data-id="q5"
+                                class="faq__expand-btn"
+                                data-isExpanded="false"
+                                >+</button
+                            >
+                        </div>
+                        <div class="answer answer-q5">
+                            <p>
+                                Absolutely! You can select a delivery time
+                                during the checkout process to have your food
+                                delivered at a later time.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="question__wrapper"
+                        data-id="q6"
+                        data-isExpanded="false">
+                        <div class="question">
+                            <h4 class="question__h4" style="margin: 0">
                                 What happens if my order is delayed?
                             </h4>
-                            <button data-id="q6" class="faq__expand-btn" data-isExpanded="false">+</button>
+                            <button
+                                data-id="q6"
+                                class="faq__expand-btn"
+                                data-isExpanded="false"
+                                >+</button
+                            >
                         </div>
                         <div class="answer answer-q6">
                             <p>
-                                We strive to deliver on time, but delays may occur due to traffic or other unforeseen circumstances. We’ll notify you immediately if there’s a delay.
+                                We strive to deliver on time, but delays may
+                                occur due to traffic or other unforeseen
+                                circumstances. We’ll notify you immediately if
+                                there’s a delay.
                             </p>
                         </div>
                     </div>
@@ -388,18 +607,27 @@
         <footer class="footer section" id="footer">
             <div class="footer__wrapper section-wrapper">
                 <section class="footer__section">
-                    <h2>Logo</h2>    
-    
+                    <h2>Logo</h2>
+
                     <div class="footer__social-link-cont">
-                        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                        <a
+                            href="https://facebook.com"
+                            target="_blank"
+                            aria-label="Facebook">
                             <i class="fab fa-facebook-f"></i>
-                          </a>
-                          <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                        </a>
+                        <a
+                            href="https://instagram.com"
+                            target="_blank"
+                            aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
-                          </a>
-                          <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
+                        </a>
+                        <a
+                            href="https://tiktok.com"
+                            target="_blank"
+                            aria-label="TikTok">
                             <i class="fab fa-tiktok"></i>
-                          </a>
+                        </a>
                     </div>
                 </section>
 
@@ -426,11 +654,9 @@
                     </ul>
                 </section>
             </div>
-            <div class="copyrite">
-                &copy; Copyrite UncleD Kitchen
-            </div>
+            <div class="copyrite"> &copy; Copyrite UncleD Kitchen </div>
         </footer>
-    
-    <script type="module" src="index.js"></script>
-</body>
+
+        <script type="module" src="index.js"></script>
+    </body>
 </html>
