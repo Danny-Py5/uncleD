@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load data</title>
+
+    <style>
+        .itemsCont{
+            max-width: 500px;
+            display: flex;
+            gap: 1.5rem;
+            margin: auto;
+        }
+        .itemsCont div{
+            flex-basis: 200px;
+            border: 2px solid lightgray;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="itemsCont">
+        <div>
+            <img src="img/downloads/fastest-delivery.png" alt="">
+            <p>item 1</p>
+        </div>
+    </div>
+
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+        import { getDatabase,  ref, set, get, update} from "https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js";
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyCbv_GNen8SVw1RAk896POAoVCWRJ7dJIY",
+          authDomain: "practice-loading-saving-db.firebaseapp.com",
+          projectId: "practice-loading-saving-db",
+          storageBucket: "practice-loading-saving-db.firebasestorage.app",
+          messagingSenderId: "466563784850",
+          appId: "1:466563784850:web:74df4424fecb63a70ec64b"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        console.log('Firebase connected successfully!');
+
+        async function setItem(){
+            const itemsRef =  ref(database, 'items/item1');
+            
+            const item1 = {
+                name: 'daniel', 
+                age: '20', 
+                friend: 'samuel'
+            };
+
+            try {
+                await set(itemsRef, item1);
+                
+            } catch (error) {
+                console.log(error)
+            };
+        };
+        // setItem()
+
+        const getItem = async () => {
+            const itemsRef = ref(database, 'items')
+
+            const snapshot = await get(itemsRef);
+            console.log(snapshot.toJSON());
+        };
+        // getItem();
+
+        const updateItem = async () => {
+            const itemsRef = ref(database, 'items/item1');
+            const result = await update(itemsRef, {
+                friend: 'Gideon'
+            })
+            console.log(result, 'result updated!');
+        };
+        updateItem();
+
+
+    </script>
+
+</body>
+</html>
