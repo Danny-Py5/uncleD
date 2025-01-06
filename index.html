@@ -16,11 +16,11 @@
 </head>
 <body>
 
-    <header class="header" id="head">
+    <header class="header" id="header">
         <section class="header__wrapper">
             <div class="header__logo-cont flex-center">
                 <!-- <img src="" alt=""> -->
-                <b>UncleD Logo</b>
+                <b class="header__logo">UncleD Logo</b>
             </div>
 
             <nav class="header__nav flex-center">
@@ -62,10 +62,13 @@
                 </button>
             </div>
 
-            <button class="header__drop-menu header__button">
-                <i class="fas fa-bars"></i> 
-                <!-- <i class="fas fa-times"></i> -->
-            </button>
+            <div class="header__drop-menu-cont">
+                <button class="header__drop-menu header__button">
+                    <i class="fas fa-bars"></i> 
+                    -
+                    <!-- <i class="fas fa-times"></i> -->
+                </button>
+            </div>
         </section>
 
     </header>
@@ -77,7 +80,7 @@
                 <h1><span class="">Taste the Joy,</span> <span class="nowwrap">Love the Flavor!</span></h1>
                 <p style="max-width: 50ch">taste of delicious dishes crafted from the freshest ingredients, prepared with care, and delivered right to your doorstep.</p>
 
-                <button>Explore Our Menu</button>
+                <button onclick="window.location.href='#menu'" >Explore Our Menu</button>
             </section>
 
             <section class="hero__division">
@@ -92,10 +95,156 @@
                     
                 </div><div class="hero__eclipse"></div>
             </section>
+        </div>
+    </section>
 
+    <!-- Our menu -->
+    <section class="our-menu section" id="menu">
+        <div  class="our-menu__wrapper section-wrapper">
+            <h2 class="our-menu__h2">Our Menu</h2>
+            <div class="menu__card-wrapper">
+                <div class="menu__card">
+                    <figure>
+                        <img width="200px" src="img/menu/efo-and-egusi-soup.jpg" alt="efo-and-egusi-soup">
+                    </figure>
+                    <div class="menu__description ">
+                        <h3>Jollof Rice</h3>
+                        <p>Delicious Nigerian Jollof rice served with fried chicken</p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <figure>
+                        <img width="200px" src="img/menu/efo-and-egusi-soup.jpg" alt="efo-and-egusi-soup">
+                    </figure>
+                    <div class="menu__description ">
+                        <h3>Jollof Rice</h3>
+                        <p>Delicious Nigerian Jollof rice served with fried chicken</p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <figure>
+                        <img width="200px" src="img/menu/efo-and-egusi-soup.jpg" alt="efo-and-egusi-soup">
+                    </figure>
+                    <div class="menu__description ">
+                        <h3>Jollof Rice</h3>
+                        <p>Delicious Nigerian Jollof rice served with fried chicken</p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <figure>
+                        <img width="200px" src="img/menu/efo-and-egusi-soup.jpg" alt="efo-and-egusi-soup">
+                    </figure>
+                    <div class="menu__description ">
+                        <h3>Jollof Rice</h3>
+                        <p>Delicious Nigerian Jollof rice served with fried chicken</p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <figure>
+                        <img width="200px" src="img/menu/efo-and-egusi-soup.jpg" alt="efo-and-egusi-soup">
+                    </figure>
+                    <div class="menu__description ">
+                        <h3>Jollof Rice</h3>
+                        <p>Delicious Nigerian Jollof rice served with fried chicken</p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <figure>
+                        <img width="200px" src="img/menu/efo-and-egusi-soup.jpg" alt="efo-and-egusi-soup">
+                    </figure>
+                    <div class="menu__description ">
+                        <h3>Jollof Rice</h3>
+                        <p>Delicious Nigerian Jollof rice served with fried chicken</p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <figure>
+                        <img width="200px" src="img/menu/efo-and-egusi-soup.jpg" alt="efo-and-egusi-soup">
+                    </figure>
+                    <div class="menu__description ">
+                        <h3>Jollof Rice</h3>
+                        <p>Delicious Nigerian Jollof rice served with fried chicken</p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <figure>
+                        <img width="200px" src="img/menu/efo-and-egusi-soup.jpg" alt="efo-and-egusi-soup">
+                    </figure>
+                    <div class="menu__description ">
+                        <h3>Jollof Rice</h3>
+                        <p>Delicious Nigerian Jollof rice served with fried chicken</p>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="leaf" src="img/downloads/leafs.png" alt="leaf">
+        <img class="leaf" src="img/downloads/leafs.png" alt="leaf">
+    </section>
 
+    <!-- Why us -->
+    <section class="why-us section" id="whyUs">
+        <div class="why-us__wrapper section-wrapper">
+            <div class="why-us__cont flex-center">
+                <div class="circle">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    
+                </div>
+                <div class="circle">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <img class="center-image" src="img/menu/fish-2.jpg" alt="fish">
+
+                    <img src="img/menu/soup.jpg" alt="" class="round-img">
+                    <img src="img/menu/rice-with-carrot.jpg" alt="" class="round-img">
+                    <img src="img/menu/fish-3.jpg" alt="" class="round-img">
+                    <img src="img/menu/moimoi-with-egg.jpg" alt="" class="round-img">
+                    <img src="img/menu/moimoi-fish-with-egg.jpg" alt="" class="round-img">
+                </div>    
+            </div>
+
+            <div class="why-us__cont">
+                <h2>Why you will like to choose <span class="uncled">UncleD Kitchen</span></h2>
+                <p>We’re not just another food delivery service. At <strong class="uncled">UncleD Kitchen</strong>, we make sure you enjoy the best food experience, delivered straight to your door. Here’s why we’re the best choice for not only you but also family and loved ones.</p>
+
+                <div class="why-card-cont">
+                    <div class="y-card">
+                        <h3>Fresh Ingredients</h3>
+                        <p>We partner with trusted restaurants and chefs to ensure every meal is prepared with the freshest and finest ingredients.</p>
+                    </div>
+                    <div class="y-card">
+                        <h3>On-Time, Every Time</h3>
+                        <p>With our reliable delivery network, your food arrives hot and fresh, just as you like it.</p>
+                    </div>
+                    <div class="y-card">
+                        <h3>Delicious on a Budget</h3>
+                        <p>Enjoy great food without stretching your wallet, with regular deals and discounts just for you.</p>
+                    </div>
+                    <div class="y-card">
+                        <h3>Easy to Order</h3>
+                        <p>Our user-friendly platform ensures a hassle-free experience, making ordering your favorite meals quick and simple.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     
+    <script type="module" src="app.js"></script>
 </body>
 </html>
