@@ -527,6 +527,9 @@ button:hover{
     .header__login{
         display: block;
     }
+    .header__login.login1{
+        display: none;
+    }
     .menu__card-wrapper{
         grid-template-columns: repeat(4, 1fr);
     }

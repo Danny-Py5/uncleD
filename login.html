@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UncleD Kitchen login page"> 
+    <meta name="autho" content="Daniel Olatunde Fatokun aka DannyPy">
+    <title>UncleD Kitchen - Login Page</title>
+
+    <style>
+        html{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI'
+        }
+        body{
+            /* background-image: linear-gradient(rgb(0, 48, 53) 50% , rgb(209, 247, 255)); */
+            background-color: #EAF2F5;
+            height: 100vh;
+        }
+        form{
+            display:flex;
+            flex-flow: column nowrap;
+            margin: 5% auto;
+            width: 50%;
+            padding: 2rem 1rem;
+            /* background-color: rgba(218, 206, 206, 0.5); */
+            max-width: 1000px;
+        }
+        a:any-link{
+            color: inherit;
+        }
+        label:first-of-type(1){
+            margin-top: .5rem;
+        }
+        label[for='password']{
+            margin-top: 1.5rem;
+        }
+        input, button{
+            margin-top: 2rem;
+            cursor: pointer;
+        }
+        input{
+            padding: .8rem .5rem;
+            border: none;
+            border-radius: .4rem;
+        }
+        .input--explict-margin-top{
+            margin-top: .5rem;
+        }
+        
+        button{
+            padding: .8rem;
+            border-radius: .4rem;
+            font: inherit;
+            border: 2px solid rgba(255, 255, 255, 0.682);
+            text-transform: uppercase;
+            color: rgb(255, 255, 255);
+            font-weight: 600;
+            background-color: rgba(0, 207, 204, 0.592);
+        }
+        label{
+            display: none;
+        }
+    
+        .showlabel{
+            display: block;
+            animation: label .5s cubic-bezier(.8, 0.82, 0.1,  1);
+        }
+        @keyframes label {
+            from{
+                transform: translateY(30px)
+            }
+            80%{
+                transform: translateY(-5px);
+            }
+            to{
+                transform: translateY(0);
+            }
+        }
+        @media (max-width: 750px) {
+            form{
+                width: 80%;
+            }
+        }
+        @media (max-width: 400px){
+            form{
+                width: 100%;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form id="form">
+        <h1>Welcome Back!</h1>
+        <p>Login</p>
+        <span class="displayError"></span>
+        <label class="email" for="email">Your Email Address</label>
+        <input type="email" placeholder="email" id="email">
+
+        <label class="password" for="password">Your Password</label>
+        <input type="password" placeholder="password" id="password">
+
+        <button>Submit</button>
+        <p>I don't have an account: <a href="create-account.html">Create an account</a></p>
+    </form>
+
+    <script>
+        const inputs = document.querySelectorAll('input');
+
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+            
+                showLabel(input.id);
+            })
+        })
+
+        function normalize(inpuId){
+            document.querySelectorAll('label').forEach(label => {
+                label.classList.remove('showlabel');
+            })
+            document.querySelectorAll('input').forEach(input => {
+                input.classList.remove('input--explict-margin-top');
+            })
+        }
+        function showLabel(inpuId){
+            normalize(inpuId);
+
+            document.querySelector(`.${inpuId}`).classList.add('showlabel');
+            
+            document.getElementById(`${inpuId}`).classList.add('input--explict-margin-top');
+        }
+    </script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, sendEmailVerification} from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+        apiKey: "AIzaSyDzyU6f5eoPUChiRLpz4oq-jhs3ZTIpLvA",
+        authDomain: "uncled-kitchen.firebaseapp.com",
+        projectId: "uncled-kitchen",
+        storageBucket: "uncled-kitchen.firebasestorage.app",
+        messagingSenderId: "547521153263",
+        appId: "1:547521153263:web:0ad0636ce887ed98cf731a"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+        // Get Auth instance
+        const auth = getAuth(app);
+
+        // console.log(auth)
+
+
+        // onAuthStateChanged(auth, (user) => {
+        //     if (user){
+        //         window.location.href = 'dashboard.html'
+        //     };
+        // });
+
+        // Sign-up function
+        const displayError = document.querySelector('.displayError');
+        
+
+        // Form submission handler
+        const form = document.getElementById('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const userEmail = document.getElementById('email').value;
+            const userPassword = document.getElementById('password').value;
+            // console.log({userEmail, userPassword});
+            signIn(userEmail, userPassword); 
+        });
+
+        async function signIn(email, password){
+            try {
+                const userCredential = await signInWithEmailAndPassword(auth, email, password);
+                // console.log(userCredential);
+                if (!userCredential.user.emailVerified){
+                    displayError.innerHTML = `Please verify your email before logging in! <a href="#" class="resendlink"">Resend verification link</a>`;
+                    displayError.style.color = 'red';
+
+                    document.querySelector('.resendlink').addEventListener('click', resendVerificationEmail)
+                    return;
+                };
+                window.location.href = 'dashboard.html'
+                // console.log('Successfully signed up');
+            } catch (error) {
+                const displayError = document.querySelector('.displayError');
+                displayError.textContent = 'Invalid credentials. Please check your email and password.';
+                displayError.style.color = 'red'
+            }
+        };
+
+
+        async function resendVerificationEmail() {
+        const user = auth.currentUser;
+
+        // console.log(user);
+        if (user && !user.emailVerified) {
+            try {
+                // Send verification email again
+                await sendEmailVerification(user);
+                displayError.textContent = 'Verification link has been sent. Please check your inbox!';
+                displayError.style.color = 'green';
+            } catch (error) {
+                console.error('Error sending verification email:', error.message);
+                alert('An error occurred while sending the verification email.');
+            }
+        } else {
+            displayError.textContent = 'Your email is has been verified! Login in';
+        }
+    }
+    </script>
+</body>
+</html>

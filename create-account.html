@@ -1,0 +1,212 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="UncleD Kitchen login page"> 
+    <meta name="autho" content="Daniel Olatunde Fatokun aka DannyPy">
+    <script src="https://cdn.jsdelivr.net/npm/validator@latest/validator.min.js"></script>
+
+    <title>UncleD Kitchen - Create Account</title>
+
+    <style>
+        html{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
+            /* color: grey; */
+        }
+        body{
+            /* background-image: linear-gradient(rgb(0, 48, 53) 50% , rgb(209, 247, 255)); */
+            background-color: #EAF2F5;
+            height: 100vh;
+        }
+        form{
+            display:flex;
+            flex-flow: column nowrap;
+            margin: 5% auto;
+            width: 50%;
+            padding: 2rem 1rem;
+            /* background-color: rgba(218, 206, 206, 0.5); */
+            max-width: 1000px;
+        }
+        label[for='password']{
+            margin-top: 1.5rem;
+        }
+        input, button{
+            margin-top: 2rem;
+        }
+        input{
+            padding: .8rem .5rem;
+            border: none;
+            border-radius: .4rem;
+            font: inherit;
+        }
+        .input--explict-margin-top{
+            margin-top: .5rem;
+        }
+        
+        button{
+            padding: .8rem;
+            border-radius: .4rem;
+            font: inherit;
+            border: 2px solid rgba(255, 255, 255, 0.682);
+            text-transform: uppercase;
+            color: rgb(255, 255, 255);
+            font-weight: 600;
+            background-color: rgba(0, 207, 204, 0.592);
+            cursor: pointer;
+        }
+        label{
+            display: none;
+        }
+        form a{
+            color: inherit;
+        }
+       
+        .showlabel{
+            display: block;
+            animation: label .5s cubic-bezier(.8, 0.82, 0.1,  1);
+        }
+        @keyframes label {
+            from{
+                transform: translateY(30px)
+            }
+            80%{
+                transform: translateY(-5px);
+            }
+            to{
+                transform: translateY(0);
+            }
+        }
+        @media (max-width: 750px) {
+            form{
+                width: 80%;
+            }
+        }
+        @media (max-width: 400px){
+            form{
+                width: 100%;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form method="post" id="form" >
+        <h1>Create an Account</h1>
+
+        <span class="displayError"></span>
+        <label class="email" for="email">Email</label>
+        <input required type="email" placeholder="Input your email" id="email">
+        
+        <label class="password" for="password">Password</label>
+        <input required type="password" placeholder="password" id="password">
+
+        <button type="submit">Submit</button>
+        <p>Already have an account. <a href="login.html">Login</a></p>
+    </form>
+
+    <script>
+        const inputs = document.querySelectorAll('input');
+
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+            
+                showLabel(input.id);
+            })
+        })
+
+        function normalize(inpuId){
+            document.querySelectorAll('label').forEach(label => {
+                label.classList.remove('showlabel');
+            })
+            document.querySelectorAll('input').forEach(input => {
+                input.classList.remove('input--explict-margin-top');
+            })
+        }
+        function showLabel(inpuId){
+            normalize(inpuId);
+
+            document.querySelector(`.${inpuId}`).classList.add('showlabel');
+            
+            document.getElementById(`${inpuId}`).classList.add('input--explict-margin-top');
+
+        }
+    </script>
+
+    <!-- Correct Import from Firebase v11.1.0 -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword, sendEmailVerification} from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDzyU6f5eoPUChiRLpz4oq-jhs3ZTIpLvA",
+            authDomain: "uncled-kitchen.firebaseapp.com",
+            projectId: "uncled-kitchen",
+            storageBucket: "uncled-kitchen.firebasestorage.app",
+            messagingSenderId: "547521153263",
+            appId: "1:547521153263:web:0ad0636ce887ed98cf731a"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        // console.log(validator)
+
+        // Sign-up function
+        async function signUp(email, password){
+            const displayError = document.querySelector('.displayError');
+            
+            if (!validator.isEmail(email)) {
+                displayError.textContent = 'Invalid email format. Please check your email.';
+                displayError.style.color = 'red';
+                return;
+            }            
+
+            try {                
+                const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+                const user = userCredential.user;
+
+                await sendEmailVerification(user);
+                displayError.textContent = 'A verification email has been sent to your inbox. Please verify your email before logging in. You will  be redirected to the login page soon!';
+                displayError.style.color = 'green';
+
+                setTimeout(() => {
+                    window.location.href = 'login.html';
+                }, 10000);
+
+            } catch (error) {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+
+                if (errorCode === 'auth/weak-password') {
+                    displayError.textContent = 'Password should be at least 6 characters.';
+                    displayError.style.color = 'red';
+                } else if (errorCode === 'auth/email-already-in-use') {
+                    displayError.textContent = 'This email is already in use. Try a different one.';
+                    displayError.style.color = 'red';
+                } else if (errorCode === 'auth/invalid-email') {
+                    displayError.textContent = 'Please enter a valid email address.';
+                    displayError.style.color = 'red';
+                } 
+                // else {
+                //     displayError.textContent = 'An unknown error occurred: ' + errorMessage;
+                //     displayError.style.color = 'red';
+                // }
+                // console.log("Error signing up:", error.message);
+            };
+        }
+
+        // Form submission handler
+        const form = document.getElementById('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const userEmail = document.getElementById('email').value;
+            const userPassword = document.getElementById('password').value;
+            // console.log({ userEmail, userPassword }); 
+            signUp(userEmail, userPassword); 
+        });
+    </script>
+
+</body>
+</html>
