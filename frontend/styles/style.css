@@ -116,6 +116,7 @@ button:hover {
 }
 .section {
     padding: var(--section-padding);
+    margin-bottom: 4rem;
 }
 .section-wrapper {
     max-width: var(--section-wrapper-max-width);
@@ -146,6 +147,10 @@ button:hover {
     padding: var(--general-padding);
     background-color: var(--accent-color);
     box-shadow: 0 5px 20px var(--accent-color);
+}
+.header__logo {
+    align-self: flex-start;
+    margin-top: 5px;
 }
 
 .header__wrapper {
@@ -300,13 +305,27 @@ button:hover {
 /* category  */
 .category-cont {
     display: flex;
-    justify-content: center;
     align-items: center;
-    column-gap: 1rem;
-    overflow: hidden;
+    gap: 1rem;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
     scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    background-color: red;
+    padding: 1rem 0;
+    cursor: grab;
+
+    /* Optional: Hide scrollbar for cleaner look */
+    scrollbar-width: none; /* Firefox */
+}
+.category-cont::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+.category figure img {
+    border-radius: 100%;
+}
+.category__figure figcaption {
+    text-align: center;
 }
 
 /* menu */
@@ -346,6 +365,11 @@ button:hover {
     box-shadow: 0 0 20px var(--box-shadow);
     transition: 0.3s;
     border: 2px solid rgba(255, 255, 255, 0);
+}
+.menu__card figure img {
+    height: 120px;
+    width: 150px;
+    object-fit: cover;
 }
 .menu__card:hover {
     border: 2px solid rgba(255, 193, 59, 0.394);
@@ -520,6 +544,30 @@ button:hover {
     margin-bottom: 1rem;
 }
 
+/* service  */
+.service__card-cont {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.service > div > h2 {
+    margin-bottom: 0;
+}
+.service > div > p {
+    color: var(--secondary-color);
+}
+.service__card-cont .y-card {
+    margin: 0;
+    background: unset;
+    box-shadow: 0 0 20px rgba(218, 218, 218, 0.512);
+    flex-basis: 250px;
+    height: 280px;
+}
+.service img {
+    width: 60px;
+    margin-bottom: 1rem;
+}
 /* faq */
 
 .faq-wraper {
@@ -577,6 +625,7 @@ button:hover {
     padding-top: 0;
     padding-bottom: 0;
 }
+
 footer h3 {
     color: var(--secondary-color);
 }

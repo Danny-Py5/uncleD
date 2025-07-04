@@ -4,35 +4,41 @@ const headerLogin = header.querySelector(".header__login");
 const headerMenuCont = header.querySelector(".header__drop-menu-cont");
 const headerLogoCont = header.querySelector(".header__logo-cont");
 
-let offsetX,
-    offsetY = undefined;
+const slider = document.querySelector(".category-cont");
 let isMouseDown = false;
+let startX;
+let scrollLeft;
 
-document
-    .querySelector(".category__wrapper ")
-    .addEventListener("mousedown", (e) => {
-        offsetX = e.offsetX;
-        offsetY = e.offsetY;
-        isMouseDown = true;
-        // console.log(e.offsetX, e.offsetY);
-    });
-document
-    .querySelector(".category__wrapper ")
-    .addEventListener("mousemove", function (e) {
-        if (isMouseDown) {
-            console.log("offsetX", offsetX, "move x", e.offsetX - offsetX);
-            this.scrollLeft = e.offsetX - offsetX;
-        }
-    });
+slider.addEventListener("mousedown", (e) => {
+    isMouseDown = true;
+    // slider.classList.add("active"); // optional for styling
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+});
 
-document
-    .querySelector(".category__wrapper ")
-    .addEventListener("mouseup", (e) => {
-        isMouseDown = false;
-    });
+slider.addEventListener("mouseleave", () => {
+    isMouseDown = false;
+    slider.classList.remove("active");
+});
+
+slider.addEventListener("mouseup", () => {
+    isMouseDown = false;
+    slider.classList.remove("active");
+});
+
+slider.addEventListener("mousemove", (e) => {
+    if (!isMouseDown) return;
+    e.preventDefault(); // stops text/image selection
+    const x = e.pageX - slider.offsetLeft;
+    const walk = x - startX;
+    slider.scrollLeft = scrollLeft - walk;
+});
 
 document.querySelector(".header__drop-menu").addEventListener("click", () => {
-    [headerNav, headerLogin, headerMenuCont, headerLogoCont].forEach((elem) => {
+    // [headerNav, headerLogin, headerMenuCont, headerLogoCont].forEach((elem) => {
+    //     elem.classList.toggle("active");
+    // });
+    [headerNav, headerMenuCont].forEach((elem) => {
         elem.classList.toggle("active");
     });
 });
@@ -57,7 +63,10 @@ document.querySelectorAll(".question__wrapper").forEach((question) => {
 });
 
 function removeActiveOnHeader() {
-    [headerNav, headerLogin, headerMenuCont, headerLogoCont].forEach((elem) => {
+    // [headerNav, headerLogin, headerMenuCont, headerLogoCont].forEach((elem) => {
+    //     elem.classList.remove("active");
+    // });
+    [headerNav, headerMenuCont].forEach((elem) => {
         elem.classList.remove("active");
     });
 }

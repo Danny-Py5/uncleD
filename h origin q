@@ -1,0 +1,53 @@
+[33mcommit de3877766a31ead1fa1b4eab94cfb883b48086a5[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mstaticVersion[m[33m)[m
+Author: DannyPY <olatundedaniel943@gmail.com>
+Date:   Fri Jul 4 12:17:35 2025 -0700
+
+    v1
+
+[33mcommit 4ddcfe5628f692dff4930e804c1ee82c75e2542e[m
+Author: DannyPY <olatundedaniel943@gmail.com>
+Date:   Fri Jan 4 03:16:35 1980 -0800
+
+    working ...
+
+[33mcommit 8291cb4eaec85b2c4c4cb385fcd56f5e42508ef5[m
+Author: DannyPY <olatundedaniel943@gmail.com>
+Date:   Fri Jan 4 02:03:41 1980 -0800
+
+    fixed
+
+[33mcommit 5b770213a03c3ef09024dfb91337113489cd17b5[m
+Author: DannyPY <olatundedaniel943@gmail.com>
+Date:   Mon Jan 13 07:40:23 2025 -0800
+
+    add categories and initialize node
+
+[33mcommit 6f1a4c7be6fd4145ef4d19111bbc9eb11efb6f06[m
+Author: DannyPY <olatundedaniel943@gmail.com>
+Date:   Fri Jan 4 00:57:57 1980 -0800
+
+    split files
+
+[33mcommit 087cd7d984458e40548e221acf424e9470a090e2[m
+Author: DannyPY <olatundedaniel943@gmail.com>
+Date:   Mon Jan 6 02:34:57 2025 -0800
+
+    manged user login log out
+
+[33mcommit 8080373dec336096a87a1d49a0f32f179ce4709b[m
+Author: DannyPY <olatundedaniel943@gmail.com>
+Date:   Sun Jan 5 18:45:53 2025 -0800
+
+    fix header nav responsivness
+
+[33mcommit 2403ca7edb1afea9996c69bb01ba755dc018562d[m
+Author: DannyPY <olatundedaniel943@gmail.com>
+Date:   Sat Jan 4 08:46:47 2025 -0800
+
+    finished the header and hero section #responsive
+
+[33mcommit c6ce34ecc56f7af4a27b266076eb30f37a8fb890[m
+Author: DannyPY <olatundedaniel943@gmail.com>
+Date:   Fri Jan 3 23:47:22 2025 -0800
+
+    first commit

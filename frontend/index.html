@@ -7,7 +7,7 @@
         <meta name="author" content="Daniel Olatunde Fatokun" />
         <meta
             name="description"
-            content="UncleD kitchen eCommerce website where people can order food from there houses at their own peace." />
+            content="UncleD kitchen static website where people can view food at their own pace and order at their kitchen location." />
 
         <!-- font awesome library -->
         <link
@@ -23,7 +23,7 @@
             <section class="header__wrapper">
                 <div class="header__logo-cont flex-center">
                     <!-- <img src="" alt=""> -->
-                    <b class="header__logo">UncleD Logo</b>
+                    <b class="header__logo">UncleD</b>
                 </div>
 
                 <nav class="header__nav flex-center">
@@ -44,6 +44,9 @@
                             <a href="#about" class="header__a"> About </a>
                         </li>
                         <li>
+                            <a href="#faq" class="header__a"> FAQ </a>
+                        </li>
+                        <!-- <li>
                             <div class="header__login login1">
                                 <button
                                     onclick="window.location.href='login.html'"
@@ -56,11 +59,11 @@
                                     <i class="fas fa-user-plus"></i> Sign Up
                                 </button>
                             </div>
-                        </li>
+                        </li> -->
                     </ul>
                 </nav>
 
-                <div class="header__login login2">
+                <!-- <div class="header__login login2">
                     <button
                         onclick="window.location.href='login.html'"
                         class="header__login-button header__button">
@@ -71,7 +74,7 @@
                         class="header__create-account-button header__button">
                         <i class="fas fa-user-plus"></i> Sign Up
                     </button>
-                </div>
+                </div> -->
 
                 <div class="header__drop-menu-cont">
                     <button class="header__drop-menu header__button">
@@ -132,7 +135,7 @@
                         <img
                             width="100"
                             height="100"
-                            src="img/downloads/food-3.png"
+                            src="img/menu/jollof-rice-2.jpg"
                             alt="food"
                             class="category-img" />
                         <figcaption>Rice</figcaption>
@@ -141,7 +144,7 @@
                         <img
                             width="100"
                             height="100"
-                            src="img/downloads/food-2.png"
+                            src="img/menu/fish-2.jpg"
                             alt="food"
                             class="category-img" />
                         <figcaption>Fish</figcaption>
@@ -150,7 +153,7 @@
                         <img
                             width="100"
                             height="100"
-                            src="img/downloads/food-1.png"
+                            src="img/menu/shawama.jpg"
                             alt="food"
                             class="category-img" />
                         <figcaption>shawama</figcaption>
@@ -159,46 +162,28 @@
                         <img
                             width="100"
                             height="100"
-                            src="img/downloads/food-4.png"
+                            src="img/menu/suya.jpg"
                             alt="food"
                             class="category-img" />
-                        <figcaption>Pizza</figcaption>
+                        <figcaption>Suya</figcaption>
                     </figure>
                     <figure class="category__figure" draggable="false">
                         <img
                             width="100"
                             height="100"
-                            src="img/downloads/food-5.png"
+                            src="img/menu/efo-and-egusi-soup.jpg"
                             alt="food"
                             class="category-img" />
-                        <figcaption>Vegetables</figcaption>
+                        <figcaption>Efo soup</figcaption>
                     </figure>
                     <figure class="category__figure" draggable="false">
                         <img
                             width="100"
                             height="100"
-                            src="img/downloads/food-6.png"
+                            src="img/menu/moimoi-with-egg.jpg"
                             alt="food"
                             class="category-img" />
-                        <figcaption>Soup</figcaption>
-                    </figure>
-                    <figure class="category__figure" draggable="false">
-                        <img
-                            width="100"
-                            height="100"
-                            src="img/downloads/food-7.png"
-                            alt="food"
-                            class="category-img" />
-                        <figcaption>Other</figcaption>
-                    </figure>
-                    <figure class="category__figure" draggable="false">
-                        <img
-                            width="100"
-                            height="100"
-                            src="img/downloads/food-3.png"
-                            alt="food"
-                            class="category-img" />
-                        <figcaption>Other</figcaption>
+                        <figcaption>Moimoi</figcaption>
                     </figure>
                 </div>
             </div>
@@ -213,7 +198,7 @@
                         <figure>
                             <img
                                 width="200px"
-                                src="img/menu/efo-and-egusi-soup.jpg"
+                                src="img/menu/jollof-rice-2.jpg"
                                 alt="efo-and-egusi-soup" />
                         </figure>
                         <div class="menu__description">
@@ -221,6 +206,48 @@
                             <p
                                 >Delicious Nigerian Jollof rice served with
                                 fried chicken</p
+                            >
+                        </div>
+                    </div>
+                    <div class="menu__card">
+                        <figure>
+                            <img
+                                width="200px"
+                                src="img/menu/moimoi-fish-with-egg.jpg"
+                                alt="efo-and-egusi-soup" />
+                        </figure>
+                        <div class="menu__description">
+                            <h3>Moimoi</h3>
+                            <p>Always hot Moimoi cooked with fish</p>
+                        </div>
+                    </div>
+                    <div class="menu__card">
+                        <figure>
+                            <img
+                                width="200px"
+                                src="img/menu/suya.jpg"
+                                alt="efo-and-egusi-soup" />
+                        </figure>
+                        <div class="menu__description">
+                            <h3>Suya</h3>
+                            <p
+                                >Spicy, flame-grilled beef skewers seasoned with
+                                traditional Hausa spices.</p
+                            >
+                        </div>
+                    </div>
+                    <div class="menu__card">
+                        <figure>
+                            <img
+                                width="200px"
+                                src="img/menu/shawama.jpg"
+                                alt="efo-and-egusi-soup" />
+                        </figure>
+                        <div class="menu__description">
+                            <h3>Shawarma</h3>
+                            <p
+                                >Deliciously wrapped meat, veggies, and sauce in
+                                warm flatbread — a street food favorite.</p
                             >
                             <p></p>
                         </div>
@@ -229,14 +256,14 @@
                         <figure>
                             <img
                                 width="200px"
-                                src="img/menu/efo-and-egusi-soup.jpg"
+                                src="img/menu/fried-rice.jpg"
                                 alt="efo-and-egusi-soup" />
                         </figure>
                         <div class="menu__description">
-                            <h3>Jollof Rice</h3>
+                            <h3>Fried RIce</h3>
                             <p
-                                >Delicious Nigerian Jollof rice served with
-                                fried chicken</p
+                                >Colorful and tasty rice stir-fried with
+                                vegetables, spices, and sweet aroma.</p
                             >
                             <p></p>
                         </div>
@@ -245,96 +272,30 @@
                         <figure>
                             <img
                                 width="200px"
-                                src="img/menu/efo-and-egusi-soup.jpg"
-                                alt="efo-and-egusi-soup" />
+                                src="img/menu/fish.jpg"
+                                alt="fish" />
                         </figure>
                         <div class="menu__description">
-                            <h3>Jollof Rice</h3>
+                            <h3>Fish</h3>
                             <p
-                                >Delicious Nigerian Jollof rice served with
-                                fried chicken</p
+                                >Perfectly seasoned and fried or grilled fish,
+                                crispy outside, juicy inside.</p
                             >
-                            <p></p>
                         </div>
                     </div>
                     <div class="menu__card">
                         <figure>
                             <img
                                 width="200px"
-                                src="img/menu/efo-and-egusi-soup.jpg"
+                                src="img/menu/moimoi-fish-with-egg.jpg"
                                 alt="efo-and-egusi-soup" />
                         </figure>
                         <div class="menu__description">
-                            <h3>Jollof Rice</h3>
+                            <h3>Moi moi with fish</h3>
                             <p
-                                >Delicious Nigerian Jollof rice served with
-                                fried chicken</p
+                                >Steamed bean pudding served with tasty fish —
+                                soft, rich, and protein-packe</p
                             >
-                            <p></p>
-                        </div>
-                    </div>
-                    <div class="menu__card">
-                        <figure>
-                            <img
-                                width="200px"
-                                src="img/menu/efo-and-egusi-soup.jpg"
-                                alt="efo-and-egusi-soup" />
-                        </figure>
-                        <div class="menu__description">
-                            <h3>Jollof Rice</h3>
-                            <p
-                                >Delicious Nigerian Jollof rice served with
-                                fried chicken</p
-                            >
-                            <p></p>
-                        </div>
-                    </div>
-                    <div class="menu__card">
-                        <figure>
-                            <img
-                                width="200px"
-                                src="img/menu/efo-and-egusi-soup.jpg"
-                                alt="efo-and-egusi-soup" />
-                        </figure>
-                        <div class="menu__description">
-                            <h3>Jollof Rice</h3>
-                            <p
-                                >Delicious Nigerian Jollof rice served with
-                                fried chicken</p
-                            >
-                            <p></p>
-                        </div>
-                    </div>
-                    <div class="menu__card">
-                        <figure>
-                            <img
-                                width="200px"
-                                src="img/menu/efo-and-egusi-soup.jpg"
-                                alt="efo-and-egusi-soup" />
-                        </figure>
-                        <div class="menu__description">
-                            <h3>Jollof Rice</h3>
-                            <p
-                                >Delicious Nigerian Jollof rice served with
-                                fried chicken</p
-                            >
-                            <p></p>
-                        </div>
-                    </div>
-                    <div class="menu__card">
-                        <figure>
-                            <img
-                                width="200px"
-                                src="img/menu/efo-and-egusi-soup.jpg"
-                                alt="efo-and-egusi-soup" />
-                        </figure>
-                        <div class="menu__description">
-                            <h3>Jollof Rice</h3>
-                            <p
-                                >Delicious Nigerian Jollof rice served with
-                                fried chicken</p
-                            >
-                            <p></p>
                         </div>
                     </div>
                 </div>
@@ -437,7 +398,59 @@
             </div>
         </section>
 
-        <section class="faq">
+        <!-- Services -->
+        <section class="service" id="service">
+            <div class="section-wrapper">
+                <h2>Services</h2>
+                <p>For full catering services</p>
+                <div class="service__card-cont">
+                    <div class="card y-card">
+                        <img
+                            class="service__car-img"
+                            src="img/service/undraw_wedding_qt3q.svg"
+                            alt="Wedding Catering" />
+                        <div>
+                            <h3>Wedding</h3>
+                            <p>
+                                We provide elegant and delicious meals tailored
+                                for wedding receptions, ensuring your guests are
+                                served with excellence.</p
+                            >
+                        </div>
+                    </div>
+                    <div class="card y-card">
+                        <img
+                            class="service__car-img"
+                            src="img/service//undraw_birthday-girl_gyj9.svg"
+                            alt="birthday party img" />
+                        <div>
+                            <h3>Birthday Party</h3>
+                            <p>
+                                Celebrate birthdays with our special party meals
+                                and drinks, perfect for kids and adults
+                                alike.</p
+                            >
+                        </div>
+                    </div>
+                    <div class="card y-card">
+                        <img
+                            class="service__car-img"
+                            src="img/service/undraw_having-fun_kkeu.svg"
+                            alt="Burial Ceremony" />
+                        <div>
+                            <h3>Burial Ceremony</h3>
+                            <p>
+                                We offer respectful and well-organized catering
+                                services for burial ceremonies, ensuring smooth
+                                meal arrangements.</p
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq section" id="faq">
             <div class="section-wrapper faq-wraper">
                 <h2 class="faq__h2">Frequently Asked Questions</h2>
                 <div class="question__cont">
@@ -447,7 +460,7 @@
                         data-isExpanded="false">
                         <div class="question">
                             <h4 class="question__h4" style="margin: 0">
-                                How can I get started?
+                                What kind of food do you offer?
                             </h4>
                             <button
                                 data-id="q1"
@@ -457,21 +470,14 @@
                             >
                         </div>
                         <div class="answer answer-q1">
-                            <p
-                                >Click on the Menu Icon on the header. From the
-                                dropdown menu, click on the
-                                <b>Sign Up button</b>. You would be redirected
-                                to the Sign-up page.
-                                <b>Input your email and password.</b> click on
-                                the <b>submit</b> button to create an account
-                                for you</p
-                            >
-                            <p
-                                >You would be redirected to the
-                                <b>Login page</b> to verify your account from
-                                the link that would be sent to your provided
-                                email address</p
-                            >
+                            <p>
+                                We offer a variety of delicious meals including
+                                local dishes like <b>moimoi, peper soup</b>, and
+                                <b>different types of drinks</b> with
+                                <b>Jollof, fried rice, shawama, and many more</b
+                                >.
+                                <!-- You can check our full menu on the Menu page. -->
+                            </p>
                         </div>
                     </div>
 
@@ -481,7 +487,7 @@
                         data-isExpanded="false">
                         <div class="question">
                             <h4 class="question__h4" style="margin: 0">
-                                How does it work?
+                                Are your meals freshly prepared?
                             </h4>
                             <button
                                 data-id="q2"
@@ -492,10 +498,8 @@
                         </div>
                         <div class="answer answer-q2">
                             <p>
-                                Simply browse our menu, add your favorite dishes
-                                to the cart, and proceed to checkout. Once your
-                                order is confirmed, our team will prepare your
-                                meal and deliver it to your location.
+                                Absolutely! All our meals are prepared fresh
+                                daily using high-quality ingredients.
                             </p>
                         </div>
                     </div>
@@ -506,7 +510,7 @@
                         data-isExpanded="false">
                         <div class="question">
                             <h4 class="question__h4" style="margin: 0">
-                                Where do you deliver?
+                                How can I place an order?
                             </h4>
                             <button
                                 data-id="q3"
@@ -517,12 +521,10 @@
                         </div>
                         <div class="answer answer-q3">
                             <p>
-                                We currently deliver to
-                                <b
-                                    >Ilu-Alaye, Oniparaga, Rubber Estate and
-                                    Araromi-Obu</b
-                                >. If your area is not listed, stay tuned as
-                                we’re expanding our delivery zones.
+                                You can place an order by
+                                <b>calling us or using our WhatsApp number </b>
+                                listed on the Contact page. Online ordering will
+                                be available soon.
                             </p>
                         </div>
                     </div>
@@ -533,7 +535,7 @@
                         data-isExpanded="false">
                         <div class="question">
                             <h4 class="question__h4" style="margin: 0">
-                                How do I place an order?
+                                Do you offer home delivery?
                             </h4>
                             <button
                                 data-id="q4"
@@ -544,10 +546,9 @@
                         </div>
                         <div class="answer answer-q4">
                             <p>
-                                Browse our menu, select the dishes you want, and
-                                click on "Add to Cart." When you're ready, go to
-                                your cart and proceed with payment to confirm
-                                your order.
+                                Yes, we deliver to selected areas. Delivery
+                                times and charges may vary depending on your
+                                location.
                             </p>
                         </div>
                     </div>
@@ -558,7 +559,7 @@
                         data-isExpanded="false">
                         <div class="question">
                             <h4 class="question__h4" style="margin: 0">
-                                Can I schedule an order for later?
+                                What is the estimated delivery time?
                             </h4>
                             <button
                                 data-id="q5"
@@ -569,9 +570,9 @@
                         </div>
                         <div class="answer answer-q5">
                             <p>
-                                Absolutely! You can select a delivery time
-                                during the checkout process to have your food
-                                delivered at a later time.
+                                Delivery typically takes between
+                                <b>30–60 minutes</b>
+                                depending on your location and order size.
                             </p>
                         </div>
                     </div>
@@ -582,7 +583,7 @@
                         data-isExpanded="false">
                         <div class="question">
                             <h4 class="question__h4" style="margin: 0">
-                                What happens if my order is delayed?
+                                How can I pay for my order?
                             </h4>
                             <button
                                 data-id="q6"
@@ -593,10 +594,9 @@
                         </div>
                         <div class="answer answer-q6">
                             <p>
-                                We strive to deliver on time, but delays may
-                                occur due to traffic or other unforeseen
-                                circumstances. We’ll notify you immediately if
-                                there’s a delay.
+                                We accept cash on delivery, bank transfer, and
+                                mobile payment (e.g., Opay, PalmPay). Soon, we
+                                will enable online card payments.
                             </p>
                         </div>
                     </div>
@@ -604,35 +604,44 @@
             </div>
         </section>
 
-        <footer class="footer section" id="footer">
+        <!-- About  -->
+        <section class="about section" style="padding: 0" id="about">
+            <div class="about__wrapper section-wrapper">
+                <h2 class="section-title">About Us</h2>
+                <p class="about-description">
+                    At UncleD Kitchen, we are passionate about serving
+                    delicious, home-style meals that bring people together. From
+                    everyday plates to special event catering, our dishes are
+                    made with love, fresh ingredients, and a touch of tradition.
+                    Whether you're craving suya, shawarma, fried rice, or
+                    classic moimoi with fish, we deliver quality that satisfies
+                    every taste.
+                </p>
+                <p class="about-description">
+                    We proudly serve individuals, families, and events like
+                    weddings, birthdays, and ceremonies. Your satisfaction is
+                    our top priority — one tasty plate at a time.
+                </p>
+            </div>
+        </section>
+
+        <footer class="footer" id="footer">
             <div class="footer__wrapper section-wrapper">
                 <section class="footer__section">
-                    <h2>Logo</h2>
+                    <h2>UncleD</h2>
 
                     <div class="footer__social-link-cont">
                         <a
-                            href="https://facebook.com"
-                            target="_blank"
-                            aria-label="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a
-                            href="https://instagram.com"
-                            target="_blank"
-                            aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a
-                            href="https://tiktok.com"
+                            href="https://www.tiktok.com/@uncled.kitchen?_t=ZM-8xkj3orYCVJ&_r=1"
                             target="_blank"
                             aria-label="TikTok">
-                            <i class="fab fa-tiktok"></i>
+                            <i class="fab fa-tiktok"> </i> Visit us on TikTok
                         </a>
                     </div>
                 </section>
 
                 <section class="footer__section">
-                    <h3>liks</h3>
+                    <h3>links</h3>
                     <ul class="usefull__links-list">
                         <li>
                             <a href="#hero">Home</a>
@@ -646,12 +655,31 @@
                         <li>
                             <a href="#about">About</a>
                         </li>
+                        <li>
+                            <a href="#faq">Frequently asked questions (Faq)</a>
+                        </li>
                     </ul>
                     <h3>Contact</h3>
                     <ul class="contact-list">
-                        <li>Phone: +2345678901</li>
-                        <li>Phone: example@gmail.com</li>
+                        <li>Phone: +2348077082065</li>
+                        <li>Gmail: ayodeletemidayo41@gmail.com</li>
                     </ul>
+                    <div>
+                        <h3 style="margin: 1rem 0">Drop a message</h3>
+                        <a href="https://wa.me/2348077082065" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                        </a>
+
+                        <br />
+                        <a href="mailto:ayodeletemidayo41@gmail.com">
+                            <i class="fas fa-envelope"></i> Send us an Email
+                        </a>
+
+                        <br />
+                        <a href="tel:+2348077082065">
+                            <i class="fas fa-phone-alt"></i> Call Us
+                        </a>
+                    </div>
                 </section>
             </div>
             <div class="copyrite"> &copy; Copyrite UncleD Kitchen </div>
