@@ -41,7 +41,7 @@
     --font-size: clamp(1rem, 2vh, 1.2rem);
 
     /* padding */
-    --button-padding: 0.5rem 1rem;
+    --button-padding: 1rem;
     --general-padding: 0.5rem;
     --padding: 1rem;
 
