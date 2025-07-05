@@ -639,7 +639,7 @@ button:hover {
 .contact__link-card {
     padding: var(--padding);
     /* max-width: 300px; */
-    flex: 1 0 350px;
+    flex: 1 0 200px;
     background-color: var(--secondary-color);
     display: block;
     border-radius: var(--border-radius-secondary);
