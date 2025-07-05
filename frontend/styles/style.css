@@ -29,6 +29,7 @@
     --phone-app-shadow: #c7e1eb;
     --alpha-primary-color: rgba(255, 255, 255, 0.5);
     --rating-color: #ffa800;
+    --orange-color-light: #ffcc66;
     --orange-color: orange;
     --link-hover-color: rgb(255, 145, 0);
 
@@ -44,7 +45,7 @@
     --general-padding: 0.5rem;
     --padding: 1rem;
 
-    --section-padding: 5rem 0 2rem;
+    --section-padding: 3rem 0 2rem;
 
     /* width */
     --section-wrapper-max-width: 1000px;
@@ -546,13 +547,16 @@ button:hover {
     margin-bottom: 1rem;
 }
 
-/* service  */
-.service__card-cont {
+/* service  and contact */
+
+.service__card-cont,
+.contact__links-cont {
     display: flex;
     align-items: flex-start;
-    gap: 16px;
+    gap: 8px;
     flex-wrap: wrap;
 }
+/* sercvice */
 .service > div > h2 {
     margin-bottom: 0;
 }
@@ -574,7 +578,7 @@ button:hover {
 
 .faq-wraper {
     max-width: 800px;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
 }
 .question__cont {
     display: flex;
@@ -628,6 +632,28 @@ button:hover {
     padding-bottom: 0;
 }
 
+/* contact */
+.contact {
+    padding-top: 0;
+}
+.contact__link-card {
+    padding: var(--padding);
+    /* max-width: 300px; */
+    flex: 1 0 350px;
+    background-color: var(--secondary-color);
+    display: block;
+    border-radius: var(--border-radius-secondary);
+}
+.contact__link-card :where(a, p, i, h4) {
+    color: white;
+}
+.contact__link-card h4 {
+    color: var(--orange-color-light);
+    margin-bottom: 1rem;
+}
+.contact__link-card:where(:hover, :active) {
+    opacity: 0.9;
+}
 footer h3 {
     color: var(--secondary-color);
 }
