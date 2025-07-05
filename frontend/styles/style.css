@@ -9,6 +9,7 @@
 :root {
     /* color variables */
     --accent-color: #eaf2f5;
+    --accent-color-light: #f2f5f6;
     --primary-text-color: #484848;
     --secondary-text-color: #007676;
     --light-text-color: #fff;
@@ -65,7 +66,8 @@ h1 {
     font-size: clamp(2rem, 6vw, 3rem);
 }
 h2 {
-    margin-bottom: 1.4rem;
+    margin-bottom: 2rem;
+    font-size: min(2rem, 10vw);
 }
 
 li,
@@ -238,8 +240,8 @@ button:hover {
     transform: scale(0.9);
 }
 .hero__eclipse {
-    width: 350px;
-    height: 350px;
+    width: 320px;
+    height: 330px;
     border-radius: 100%;
     border: 1px solid var(--secondary-color);
     position: absolute;
@@ -251,7 +253,7 @@ button:hover {
     transform: translateX(-50%) skewX(6deg);
 }
 .hero__eclipse:nth-child(2) {
-    transform: translateX(-50%) skewX(-6deg);
+    transform: translateX(-50%) skewX(-5deg);
     position: relative;
 }
 .hero__eclipse:nth-child(3) {
@@ -354,13 +356,13 @@ button:hover {
     gap: 1rem;
 }
 .menu__card {
-    background-color: var(--accent-color);
+    background-color: var(--accent-color-light);
 
     padding: var(--general-padding);
     border-radius: var(--border-radius-primary);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     row-gap: 1rem;
     box-shadow: 0 0 20px var(--box-shadow);
     transition: 0.3s;
@@ -368,7 +370,7 @@ button:hover {
 }
 .menu__card figure img {
     height: 120px;
-    width: 150px;
+    width: 100%;
     object-fit: cover;
 }
 .menu__card:hover {
