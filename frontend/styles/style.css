@@ -216,6 +216,11 @@ button:hover {
 .header__drop-menu {
     align-self: center;
 }
+.call-to-action-btn.one {
+    background-color: #00000000;
+    color: var(--secondary-color);
+    border: 3px solid var(--secondary-color);
+}
 
 /* hero */
 .hero {
